@@ -1,12 +1,15 @@
+# 전역변수
 strName = "Not Class Member"
 
 class DemoString:
     def __init__(self):
+        # 인스턴스 멤버 변수
         self.strName = "" 
     def set(self, msg):
         self.strName = msg
     def print(self):
-        print(str)
+        # 버그 (전역변수 출력됨)
+        print(strName)
 
 d = DemoString()
 d.set("First Message")
